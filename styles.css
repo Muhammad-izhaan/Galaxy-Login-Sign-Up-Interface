@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+#star-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.5;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: moveUpwards infinite linear;
+}
+
+@keyframes moveUpwards {
+  0% {
+      transform: translateY(100vh);
+  }
+  100% {
+      transform: translateY(-100vh);
+  }
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  width: 300px;
+  opacity: 0.9;
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 0.9;
+      transform: translateY(0);
+  }
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  animation: flowText 2s ease-in-out;
+}
+
+@keyframes flowText {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  animation: flowForm 2s ease;
+}
+
+@keyframes flowForm {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 15px #007BFF;
+  animation: flowButton 2s ease;
+}
+
+@keyframes flowButton {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.btn:hover {
+  box-shadow: 0 0 30px #007BFF;
+}
+
+.form-toggle {
+  margin-top: 15px;
+  cursor: pointer;
+  color: #00aaff;
+  animation: flowText 2s ease;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  opacity: 0.8;
+}

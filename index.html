@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Login/Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="star-field"></div>
+
+    <div class="container" id="login-form">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button class="btn" onclick="login()">Login</button>
+        <p class="form-toggle" onclick="toggleForm('signup')">Don't have an account? Sign up</p>
+    </div>
+
+    <div class="container" id="signup-form" style="display: none;">
+        <h2>Sign Up</h2>
+        <input type="text" id="signup-username" placeholder="Username" required>
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+        <button class="btn" onclick="signup()">Sign Up</button>
+        <p class="form-toggle" onclick="toggleForm('login')">Already have an account? Log in</p>
+    </div>
+
+    <div class="footer">
+        Developed and designed by Izhaan
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
